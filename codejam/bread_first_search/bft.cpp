@@ -10,6 +10,7 @@ using namespace std;
 const char *endMarker="END";
 
 // does not consider the negative cases as of now
+// Note: later knew this could be done in a simpler way, but then didn know that before :)
 static int
 pos_to_index (const char *pos, size_t len)
 {
