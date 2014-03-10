@@ -17,6 +17,9 @@ pos_to_index (const char *pos, size_t len)
 	const char *iterator = pos;
 	int calc = 0, iterPos = 0;
 
+	// Logic is that the left most node's index would be decimal value of 111's and the index of right
+	// nodes can be calculated with 111's + binary representation of R's position. Eg: LR is 2^1 + 2^0
+	// LLR is 111 + 001, LLRL is 1111 + 0010
 	while (level) {
 		calc = calc << 1;
 		calc |= 0x1;
